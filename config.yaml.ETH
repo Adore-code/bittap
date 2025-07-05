@@ -1,0 +1,30 @@
+# ---------- 基础 ----------
+symbol: "ETHUSDT"                 # 用于 Binance
+symbolId: "ETH-USDT-M"            # 用于 Bittap
+reconnectHours: 1          # 每 6 小时自动重连 WebSocket
+
+# ---------- 价差阈值 ----------
+normalThreshold: 0.5       # 开仓触发下限 (USD)
+maxThreshold: 5            # 异常过滤上限 (USD)
+diffPrecision: 2           # 打印价差保留位数
+
+# ---------- 风控 (按 ROI) ----------
+minProfit: 80              # 止盈 +50% ROI
+maxLoss: -7                # 止损  -5% ROI
+holdMin: 4                 # 最短持仓时间 5 分钟
+holdMax: 5                 # 最长持仓时间 8 分钟
+cooldownSec: 60            # 平仓后冷却 60 秒
+minHoldSec: 10             # 开仓后至少 50 秒才允许平仓
+
+# ---------- 下单 ----------
+tradeVolume: 0.0         # 单次交易数量
+# 旧字段 tradeVolume 删除或留作默认
+minVolume: 0.01     # 随机下限
+maxVolume: 0.02     # 随机上限
+leverageLevel: 100         # 杠杆倍数
+
+# ---------- 日志 ----------
+maxLogSizeMB: 100          # 单日志文件上限 (MB)
+
+# ---------- Bittap API ----------
+bittapToken: "Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiIxNCoqM0BxcS5jb20iLCJpYXQiOjE3NTE3MDIzMzksImV4cCI6MTc1MjMwNzEzOX0.qOVwD2fQ55UmbnrMi_jObFexf7aA9OGDC2x8nWgYm3wUp1JpUE8zBpE5qxdU3g49"
